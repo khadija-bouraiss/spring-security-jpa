@@ -1,0 +1,93 @@
+/* --- Définition des variables de couleur --- */
+:root {
+  --color-primary: #DB1A1A;    /* Rouge Vif - Actions principales, erreurs */
+  --color-background: #FFF6F6; /* Blanc Cassé - Fond de page */
+  --color-accent-light: #8CC7C4; /* Sarcelle Pâle - Boutons secondaires, surbrillance */
+  --color-accent-dark: #2C687B;  /* Sarcelle Sombre - Texte principal, bordures, titres */
+
+  --color-text-body: #2C687B;  /* Texte par défaut */
+  --color-white: #FFFFFF;
+}
+
+/* --- Styles Globaux Modernes --- */
+body {
+  font-family: 'Poppins', sans-serif; /* Police moderne conseillée */
+  background-color: var(--color-background);
+  color: var(--color-text-body);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Styles du Formulaire de Connexion --- */
+.login-container {
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  color: var(--color-accent-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-accent-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--color-accent-light);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-accent-dark);
+}
+
+/* --- Bouton Primaire Modernisé --- */
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary); /* Passe au rouge vif au survol */
+}
+
+/* --- Messages d'Erreur --- */
+.error-message {
+  color: var(--color-primary);
+  background-color: rgba(219, 26, 26, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}

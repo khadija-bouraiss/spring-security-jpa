@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion Moderne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="login-container">
+    <h2 class="login-title">Se Connecter</h2>
+
+    <div th:if="${param.error}" class="error-message">
+        Identifiants invalides.
+    </div>
+    <div th:if="${param.logout}" class="error-message" style="color: var(--color-accent-dark); background-color: transparent; border: 1px solid var(--color-accent-light);">
+        Déconnexion réussie.
+    </div>
+
+    <form th:action="@{/login}" method="post">
+        <div class="form-group">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" class="form-control" required autofocus/>
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" id="password" name="password" class="form-control" required/>
+        </div>
+
+        <button type="submit" class="btn-primary">Connexion</button>
+    </form>
+</div>
+
+</body>
+</html>
